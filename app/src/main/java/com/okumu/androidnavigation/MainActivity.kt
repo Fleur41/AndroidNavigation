@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        //Start of  ActionBar
         //creates an object that is responsible for opening and closing of our drawer
         val drawerToggle = ActionBarDrawerToggle(
             this,
@@ -27,8 +28,9 @@ class MainActivity : AppCompatActivity() {
         )
 
         binding.mainDrawer.addDrawerListener(drawerToggle)
-        drawerToggle.syncState()
+        drawerToggle.syncState() // end of actionBar
 
+        //Start of android navigation
         //make drawer icon to always appear
         supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
 
@@ -55,11 +57,12 @@ class MainActivity : AppCompatActivity() {
             implicitIntent.putExtra(Intent.EXTRA_TEXT, "Hello from Android")
             // 3. start your navigation
             if(implicitIntent.resolveActivity(packageManager) != null){
-                startActivity(implicitIntent)
+                startActivity(implicitIntent) //end of android navigation
             }
         }
     }
 
+    // Start of menu
      // logic for creation of the menu
     @SuppressLint("RestrictedApi")
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

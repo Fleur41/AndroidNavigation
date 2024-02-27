@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.AndroidNavigation" parent="Base.Theme.AndroidNavigation" />
+
+    <style name="Theme.AndroidNavigation.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AndroidNavigation.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AndroidNavigation.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
