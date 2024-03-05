@@ -9,8 +9,11 @@ import androidx.navigation.fragment.NavHostFragment
 import com.okumu.androidnavigation.databinding.ActivityWhatsAppBinding
 
 class WhatsAppActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        lifecycle.addObserver(ToastObserver(this))
         //toast("onCreate called")
         val binding: ActivityWhatsAppBinding = DataBindingUtil.setContentView(this, R.layout.activity_whats_app)
 
